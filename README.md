@@ -1,2 +1,2 @@
 # Prueba1
-Curso Aranda
+Desarrollador Full Stack
