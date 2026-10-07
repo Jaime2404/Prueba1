@@ -1,0 +1,117 @@
+/* CONFIGURACIÓN GLOBAL E INICIAL */
+* {
+    box-sizing: border-box; /* Hace que los márgenes e interiores no alteren el tamaño total de los elementos */
+    margin: 0; /* Remueve los márgenes por defecto que traen los navegadores */
+    padding: 0; /* Remueve el espaciado interior por defecto */
+}
+
+body {
+    background-color: #f4f7f6; /* Aplica un color de fondo gris claro y suave a toda la web */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define una tipografía moderna y muy legible */
+    color: #333333; /* Establece un color gris oscuro para todos los textos principales */
+    line-height: 1.6; /* Aumenta la separación entre líneas de texto para mejorar la lectura */
+    padding: 20px; /* Añade un espacio de separación en los bordes de la pantalla */
+}
+
+/* ESTILOS DEL ENCABEZADO (HEADER) */
+.cabecera {
+    text-align: center; /* Centra horizontalmente todo el texto del encabezado */
+    margin: 40px 0; /* Deja un espacio libre arriba y abajo del encabezado */
+}
+
+.cabecera h1 {
+    color: #1e293b; /* Da un color azul pizarra muy elegante al título principal */
+    font-size: 2.5rem; /* Hace que el título sea grande y destacado */
+    margin-bottom: 10px; /* Deja separación entre el título y el subtítulo */
+}
+
+.cabecera p {
+    color: #64748b; /* Usa un gris azulado suave para el texto aclaratorio */
+    font-size: 1.1rem; /* Aumenta ligeramente el tamaño del subtítulo */
+}
+
+/* ESTILOS DE LA REJILLA O CONTENEDOR (CSS GRID) */
+.contenedor-ruta {
+    display: grid; /* Activa el modo Grid para ordenar los elementos en columnas y filas */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas automáticas: se adaptan al espacio y cambian de fila si no caben (mínimo 300px cada una) */
+    gap: 25px; /* Define una separación idéntica de 25 píxeles entre todas las tarjetas */
+    max-width: 1200px; /* Limita el ancho máximo del diseño para pantallas de ordenadores gigantes */
+    margin: 0 auto; /* Centra el bloque de la cuadrícula perfectamente en la pantalla */
+}
+
+/* ESTILOS DE LAS TARJETAS DE LOS MÓDULOS */
+.tarjeta-modulo {
+    background-color: #ffffff; /* Le da un fondo blanco puro a cada tarjeta */
+    border-radius: 12px; /* Redondea las esquinas de la tarjeta para una estética moderna */
+    padding: 25px; /* Espacio interior para que el texto no toque los bordes blancos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Aplica una sombra muy ligera en la base para dar profundidad */
+    position: relative; /* Permite colocar elementos hijos en posiciones absolutas tomando como referencia esta tarjeta */
+    border-top: 5px solid #3b82f6; /* Añade una barra azul decorativa en el borde superior */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza el movimiento cuando el usuario interactúa con la tarjeta */
+}
+
+/* EFECTO HOVER (PASAR EL CURSOR SOBRE LA TARJETA) */
+.tarjeta-modulo:hover {
+    transform: translateY(-5px); /* Eleva sutilmente la tarjeta hacia arriba al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Hace la sombra más intensa dando efecto de flotación */
+}
+
+/* ETIQUETAS FLOTANTES DE TIEMPO (BADGES) */
+.badge {
+    position: absolute; /* Desancla el elemento del flujo normal para ubicarlo con coordenadas exactas */
+    top: 15px; /* Lo coloca a 15 píxeles del borde superior */
+    right: 15px; /* Lo coloca a 15 píxeles del borde derecho */
+    background-color: #e0f2fe; /* Color de fondo azul celeste muy claro */
+    color: #0369a1; /* Texto de color azul oscuro para generar contraste */
+    padding: 4px 10px; /* Espaciado interno horizontal y vertical para darle forma de cápsula */
+    border-radius: 20px; /* Redondea completamente los bordes de la etiqueta */
+    font-size: 0.8rem; /* Hace el texto de la duración pequeño */
+    font-weight: bold; /* Pone las letras en negrita para resaltar */
+}
+
+.badge-final {
+    background-color: #fef3c7; /* Cambia el fondo a amarillo claro exclusivamente para el último módulo */
+    color: #b45309; /* Texto marrón oscuro para resaltar que es la meta del curso */
+}
+
+/* ESTILOS DE LOS TEXTOS INTERNOS DE LAS TARJETAS */
+.tarjeta-modulo h2 {
+    font-size: 1.3rem; /* Tamaño adecuado para el título del módulo */
+    color: #1e293b; /* Color oscuro e institucional */
+    margin-bottom: 12px; /* Separación con el párrafo de descripción */
+    padding-right: 90px; /* Evita que el título se encime visualmente con la etiqueta flotante del tiempo */
+}
+
+.tarjeta-modulo p {
+    font-size: 0.95rem; /* Tamaño estándar de lectura */
+    color: #475569; /* Gris medio para el cuerpo del texto */
+    margin-bottom: 15px; /* Separación con la lista de habilidades */
+}
+
+.tarjeta-modulo h3 {
+    font-size: 0.9rem; /* Título pequeño para la sección de destrezas */
+    text-transform: uppercase; /* Convierte automáticamente todo el texto a MAYÚSCULAS */
+    letter-spacing: 0.5px; /* Separa milimétricamente las letras para un estilo limpio */
+    color: #94a3b8; /* Gris claro para atenuarlo visualmente */
+    margin-bottom: 8px; /* Separación con las viñetas */
+}
+
+/* ESTILOS DE LAS LISTAS */
+.tarjeta-modulo ul {
+    list-style-position: inside; /* Mueve los puntos de la lista hacia adentro alineándolos con el texto */
+    color: #334155; /* Color del texto de las viñetas */
+    font-size: 0.9rem; /* Texto levemente más pequeño para estructurar jerarquías */
+}
+
+.tarjeta-modulo li {
+    margin-bottom: 6px; /* Deja una pequeña separación vertical entre cada habilidad de la lista */
+}
+
+/* ESTILOS DEL PIE DE PÁGINA (FOOTER) */
+.pie-pagina {
+    text-align: center; /* Centra el texto del pie de página */
+    margin-top: 50px; /* Genera una separación drástica con las tarjetas superiores */
+    padding: 20px 0; /* Espaciado interior superior e inferior */
+    color: #64748b; /* Texto en un tono gris discreto */
+    font-size: 0.9rem; /* Tamaño de letra compacto */
+}
